@@ -1,0 +1,23 @@
+.app {
+  min-height: 100vh;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+.app-header {
+  padding: 28px 35px;
+  border-bottom: 1px solid #333;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #d4af37;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+.app-subtitle {
+  margin-top: 8px;
+  color: #aaa;
+  font-size: 14px;
+}
