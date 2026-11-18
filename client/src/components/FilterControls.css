@@ -30,3 +30,18 @@
   .filter-controls select:focus {
     border-color: #d4af37;
   }
+
+  @media (max-width: 600px) {
+  .filter-controls {
+    padding: 20px 15px;
+  }
+
+  .filter-controls input {
+    flex: 1 1 100%;
+  }
+
+  .filter-controls select {
+    flex: 1;
+    min-width: 120px;
+  }
+}

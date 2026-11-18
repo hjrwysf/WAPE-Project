@@ -21,3 +21,12 @@
   color: #aaa;
   font-size: 14px;
 }
+@media (max-width: 600px) {
+  .app-header {
+    padding: 20px 15px;
+  }
+
+  .app-header h1 {
+    font-size: 28px;
+  }
+}

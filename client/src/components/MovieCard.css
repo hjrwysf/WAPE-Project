@@ -59,3 +59,29 @@
     margin: 5px 0;
     line-height: 1.5;
   }
+
+  @media (hover: none) {
+  .movie-info {
+    opacity: 1;
+    inset: auto 0 0 0;
+    justify-content: flex-end;
+    background: linear-gradient(to top, #000, transparent);
+  }
+
+  .movie-info h2 {
+    font-size: 15px;
+    margin: 0 0 4px;
+  }
+
+  .movie-info p:not(:nth-of-type(2)) {
+    display: none;
+  }
+
+  .movie-card:hover .movie-poster {
+    opacity: 1;
+  }
+
+  .movie-card:hover {
+    transform: none;
+  }
+}
