@@ -1,21 +1,22 @@
 import { useState } from 'react'
 import './Register.css'
 
-function Register({ goToPage }) {
+function Register({ goToPage = () => {} }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
+  const [message, setMessage] = useState('')
 
   const handleRegister = (event) => {
     event.preventDefault()
 
     if (password !== confirmPassword) {
-      alert('Passwords do not match.')
+      setMessage('Passwords do not match.')
       return
     }
 
-    alert('Registration is not connected yet.')
+    setMessage('Registration is not connected yet.')
   }
 
   return (
@@ -31,7 +32,6 @@ function Register({ goToPage }) {
 
           <div className="form-group">
             <label htmlFor="name">Full Name</label>
-
             <input
               id="name"
               type="text"
@@ -44,7 +44,6 @@ function Register({ goToPage }) {
 
           <div className="form-group">
             <label htmlFor="register-email">Email</label>
-
             <input
               id="register-email"
               type="email"
@@ -57,7 +56,6 @@ function Register({ goToPage }) {
 
           <div className="form-group">
             <label htmlFor="register-password">Password</label>
-
             <input
               id="register-password"
               type="password"
@@ -70,7 +68,6 @@ function Register({ goToPage }) {
 
           <div className="form-group">
             <label htmlFor="confirm-password">Confirm Password</label>
-
             <input
               id="confirm-password"
               type="password"
@@ -81,6 +78,8 @@ function Register({ goToPage }) {
             />
           </div>
 
+          {message && <p className="form-message">{message}</p>}
+
           <button type="submit" className="register-button">
             Register
           </button>
@@ -90,7 +89,6 @@ function Register({ goToPage }) {
         <div className="register-footer">
           <p>
             Already have an account?
-
             <button
               type="button"
               className="login-link"

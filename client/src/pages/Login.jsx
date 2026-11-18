@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './Login.css'
 
-function Login({ goToPage }) {
+function Login({ goToPage = () => {} }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [message, setMessage] = useState('')
 
   const handleLogin = (event) => {
     event.preventDefault()
-
-    alert('Login is not connected yet.')
+    setMessage('Login is not connected yet.')
   }
 
   return (
@@ -24,7 +24,6 @@ function Login({ goToPage }) {
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
-
             <input
               id="email"
               type="email"
@@ -37,7 +36,6 @@ function Login({ goToPage }) {
 
           <div className="form-group">
             <label htmlFor="password">Password</label>
-
             <input
               id="password"
               type="password"
@@ -47,6 +45,8 @@ function Login({ goToPage }) {
               required
             />
           </div>
+
+          {message && <p className="form-message">{message}</p>}
 
           <button type="submit" className="login-button">
             Login
