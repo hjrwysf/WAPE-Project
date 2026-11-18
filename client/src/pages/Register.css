@@ -104,6 +104,8 @@
   cursor: pointer;
   font-weight: bold;
   margin-left: 5px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .login-link:hover {
@@ -117,6 +119,8 @@
   cursor: pointer;
   font-size: 13px;
   margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .back-button:hover {

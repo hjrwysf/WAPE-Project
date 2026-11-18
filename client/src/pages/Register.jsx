@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Register.css'
 
-function Register({ goToPage = () => {} }) {
+function Register() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -89,22 +90,14 @@ function Register({ goToPage = () => {} }) {
         <div className="register-footer">
           <p>
             Already have an account?
-            <button
-              type="button"
-              className="login-link"
-              onClick={() => goToPage('login')}
-            >
-              Login
-            </button>
+            <Link to="/login" className="login-link">
+              Login here
+            </Link>
           </p>
 
-          <button
-            type="button"
-            className="back-button"
-            onClick={() => goToPage('home')}
-          >
+          <Link to="/" className="back-button">
             Back to Movies
-          </button>
+          </Link>
         </div>
 
       </div>

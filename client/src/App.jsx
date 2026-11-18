@@ -5,6 +5,8 @@ import MovieList from './components/MovieList';
 import FilterControls from './components/FilterControls';
 import Header from './Header';
 import About from './About';
+import Login from './pages/Login';
+import Register from './pages/Register';
 import './App.css';
 
 function App() {
@@ -29,9 +31,10 @@ function App() {
     if (sortOrder === 'rating-low') return a.rating - b.rating;
     if (sortOrder === 'title-asc') return a.title.localeCompare(b.title);
     if (sortOrder === 'title-desc') return b.title.localeCompare(a.title);
+    if (sortOrder === 'year-new') return b.year - a.year;
+    if (sortOrder === 'year-old') return a.year - b.year;
     return 0;
   });
-
   return (
     <BrowserRouter>
       <div>
@@ -41,20 +44,22 @@ function App() {
             path="/"
             element={
               <>
-                <FilterControls
-                  genres={genres}
-                  selectedGenre={selectedGenre}
-                  setSelectedGenre={setSelectedGenre}
-                  searchTerm={searchTerm}
-                  setSearchTerm={setSearchTerm}
-                  sortOrder={sortOrder}
-                  setSortOrder={setSortOrder}
-                />
+        <FilterControls
+          genres={genres}
+          selectedGenre={selectedGenre}
+          onGenreChange={setSelectedGenre}
+          searchTerm={searchTerm}
+          onSearchChange={setSearchTerm}
+          sortOrder={sortOrder}
+          onSortChange={setSortOrder}
+            />
                 <MovieList movies={sortedMovies} />
               </>
             }
           />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} /> 
         </Routes>
       </div>
     </BrowserRouter>
