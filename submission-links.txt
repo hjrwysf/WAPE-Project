@@ -1,15 +1,15 @@
-**Project Title:** WAPE Movies Web Application
+Project Title: WAPE Movies Web Application
 
-**Team Members:**
+Team Members:
 1. Hajar Yousef — 2240401
 2. Tala Salah Al-Deen — 2333875
 3. Arwa Murad Sabah — 2241405
 
-**Public GitHub Repository:**
+Public GitHub Repository:
 https://github.com/hjrwysf/WAPE-Project
 
-**Submitted Version Commit Hash:**
+Submitted Version Commit Hash:
 dd070b60ced0419a2dfe579e216f4f951ab97cc5
 
-**Deployed Frontend URL:**
+Deployed Frontend URL:
 https://wape-movies.onrender.com
